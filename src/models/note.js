@@ -1,4 +1,3 @@
-
 import { model, Schema } from 'mongoose';
 
 const noteSchema = new Schema(
@@ -20,6 +19,10 @@ enum: ['Work', 'Personal', 'Meeting', 'Shopping', 'Ideas', 'Travel', 'Finance', 
 default: 'Todo',
 },
 },
+  {
+    timestamps: true,
+    versionKey: false,
+  },
 );
 
 export const Note = model('Note', noteSchema);
